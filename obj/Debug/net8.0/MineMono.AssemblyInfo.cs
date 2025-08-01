@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MineMono")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e69cc780cd7bd026b26d40854557e56b2b3d913")]
 [assembly: System.Reflection.AssemblyProductAttribute("MineMono")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MineMono")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

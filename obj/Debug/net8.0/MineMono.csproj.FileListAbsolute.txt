@@ -1,3 +1,4 @@
+C:\Users\NicoA\WorkProjects\Monogame\MineMono\bin\Debug\net8.0\Content\DebugFont.xnb
 C:\Users\NicoA\WorkProjects\Monogame\MineMono\bin\Debug\net8.0\MineMono.exe
 C:\Users\NicoA\WorkProjects\Monogame\MineMono\bin\Debug\net8.0\MineMono.deps.json
 C:\Users\NicoA\WorkProjects\Monogame\MineMono\bin\Debug\net8.0\MineMono.runtimeconfig.json

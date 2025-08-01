@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MineMono.World;
+using MineMono.Debug;
 
 namespace MineMono;
 
@@ -17,6 +18,9 @@ public class Game1 : Game
 
     Matrix view;
     Matrix projection;
+    DebugOverlay debugOverlay;
+    SpriteFont debugFont;
+    Vector3 cameraPos = new Vector3(32, 32, 64);
 
 
 
@@ -58,6 +62,10 @@ public class Game1 : Game
         //add effect Basic
         effect = new BasicEffect(GraphicsDevice);
         effect.VertexColorEnabled = true;
+
+        //DebugScreen
+        debugFont = Content.Load<SpriteFont>("DebugFont");
+        debugOverlay = new DebugOverlay(debugFont);
     }
 
     protected override void Update(GameTime gameTime)
@@ -66,7 +74,7 @@ public class Game1 : Game
             Exit();
 
         // TODO: Add your update logic here
-
+        debugOverlay.Update(gameTime);
         base.Update(gameTime);
     }
 
@@ -89,8 +97,9 @@ public class Game1 : Game
                     0,
                     chunkMesh.Vertices.Count / 3
             );
-        }
 
+        }
+        debugOverlay.Draw(_spriteBatch, gameTime, chunkMesh, view, cameraPos);
         base.Draw(gameTime);
     }
 }
