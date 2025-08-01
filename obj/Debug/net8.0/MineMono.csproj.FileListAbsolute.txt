@@ -24,6 +24,7 @@ C:\Users\NicoA\WorkProjects\Monogame\MineMono\obj\Debug\net8.0\MineMono.Generate
 C:\Users\NicoA\WorkProjects\Monogame\MineMono\obj\Debug\net8.0\MineMono.AssemblyInfoInputs.cache
 C:\Users\NicoA\WorkProjects\Monogame\MineMono\obj\Debug\net8.0\MineMono.AssemblyInfo.cs
 C:\Users\NicoA\WorkProjects\Monogame\MineMono\obj\Debug\net8.0\MineMono.csproj.CoreCompileInputs.cache
+C:\Users\NicoA\WorkProjects\Monogame\MineMono\obj\Debug\net8.0\MineMono.sourcelink.json
 C:\Users\NicoA\WorkProjects\Monogame\MineMono\obj\Debug\net8.0\MineMono.csproj.Up2Date
 C:\Users\NicoA\WorkProjects\Monogame\MineMono\obj\Debug\net8.0\MineMono.dll
 C:\Users\NicoA\WorkProjects\Monogame\MineMono\obj\Debug\net8.0\refint\MineMono.dll

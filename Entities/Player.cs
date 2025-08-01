@@ -22,7 +22,7 @@ namespace MineMono.Entities
         private bool isGrounded;
 
         private GravitySystem gravitySystem;
-        private Player(Vector3 spawnPosition, GravitySystem gravity)
+        public Player(Vector3 spawnPosition, GravitySystem gravity)
         {
             Position = spawnPosition;
             Velocity = Vector3.Zero;
@@ -43,20 +43,18 @@ namespace MineMono.Entities
             if (moveDir.LengthSquared() > 0) moveDir.Normalize();
 
             Vector3 horizontal = new(moveDir.X, 0, moveDir.Z);
-            Velocity.X = horizontal.X * Speed;
-            Velocity.Z = horizontal.Z * Speed;
-
+            Velocity = new Vector3(horizontal.X * Speed, Velocity.Y, horizontal.Z * Speed);
             // aplica gravedad
             Velocity += gravitySystem.GetGravityForce(dt);
 
-            if (isGrounded && input.IsKeyDown(Keys.Space)) Velocity.Y = JumpStrength;
+            if (isGrounded && input.IsKeyDown(Keys.Space)) Velocity = new Vector3(Velocity.X, JumpStrength, Velocity.Z);
 
             Vector3 newPos = Position + Velocity * dt;
 
             if (newPos.Y <= 0)
             {
                 newPos.Y = 0;
-                Velocity.Y = 0;
+                Velocity = new Vector3(Velocity.X, 0, Velocity.Z);
                 isGrounded = true;
             }
             else
