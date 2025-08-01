@@ -4,6 +4,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MineMono.World;
 using MineMono.Debug;
+using MineMono.Physics;
+using MineMono.Entities;
 
 namespace MineMono;
 
@@ -11,6 +13,8 @@ public class Game1 : Game
 {
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
+    GravitySystem gravity;
+    Player player;
 
     Chunk chunk;
     ChunkMesh chunkMesh;
@@ -66,6 +70,9 @@ public class Game1 : Game
         //DebugScreen
         debugFont = Content.Load<SpriteFont>("DebugFont");
         debugOverlay = new DebugOverlay(debugFont);
+
+        gravity = new GravitySystem(Vector3.Down, 20f);
+        player = new Player(new Vector3(8, 10, 8), gravity);
     }
 
     protected override void Update(GameTime gameTime)
