@@ -106,7 +106,7 @@ public class Game1 : Game
             );
 
         }
-        debugOverlay.Draw(_spriteBatch, gameTime, chunkMesh, view, cameraPos);
+        debugOverlay.Draw(_spriteBatch, gameTime, chunkMesh, view, player.Position);
         base.Draw(gameTime);
     }
 }
